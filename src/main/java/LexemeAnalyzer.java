@@ -128,7 +128,7 @@ public class LexemeAnalyzer {
     }
 
     private void input() {
-        if (restCode == "") {
+        if (restCode.equals("")) {
             currentSymbol = EOF;
         } else {
             currentSymbol = restCode.charAt(0);
@@ -141,11 +141,21 @@ public class LexemeAnalyzer {
     }
 
     private boolean isDelimiter(char ch) {
-        return Arrays.asList(delimiters).contains(ch);
+        for (char c : delimiters) {
+            if (c == ch) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private boolean isComplexDelimiter(char ch) {
-        return Arrays.asList(complexDelimitersSymbols).contains(ch);
+        for (char c : complexDelimitersSymbols) {
+            if (c == ch) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private boolean isWhiteSpace(char ch) {
@@ -168,4 +178,7 @@ public class LexemeAnalyzer {
         return !values.contains(value);
     }
 
+    public List<Integer> getEncodedLexemes() {
+        return this.encodedLexemes;
+    }
 }
