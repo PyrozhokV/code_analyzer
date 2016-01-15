@@ -1,6 +1,0 @@
-PROGRAM procedureIdentifier1 ;
-CONST A = 100;
-BEGIN
-VARIABLE1 := 9 ;
-(*comment*)
-END.

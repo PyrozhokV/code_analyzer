@@ -1,0 +1,6 @@
+PROGRAM procedureIdentifier;
+CONST A = 100;
+BEGIN
+VARIABLE :=  1 ;
+var := 9;
+END.
